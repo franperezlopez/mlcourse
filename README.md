@@ -1,14 +1,13 @@
-Machine Learning Introduction 
-=============================
+## Machine Learning Introduction 
 
-Install using local Environment
 
-Prerequisites:
+### Install using local Environment
 
-* Conda installation
+#### Prerequisites:
 
-You need to execute following commands to create a new python environment, containing all libraries needed for the course:
+* Conda installation: [Install Anaconda](http://docs.anaconda.com/anaconda/install/) for your OS
 
+* After installing Conda, you need to execute following commands from the folder where the repository is located:
 ```sh
 conda update -n base -c defaults conda
 conda env create --name mlcourse -f environment.yml
@@ -16,19 +15,27 @@ conda activate mlcourse
 python -m ipykernel install --user --name mlcourse --display-name "Python (mlcourse)"
 jupyter notebook
 ```
-
-After executing last command, the jupyter notebook will get displayed in your browser. The course notebooks are located in the folder named `notebooks`. After opening any notebook, check that the kernel you're using is the one named `Python (mlcourse)`, otherwise change it using the menu `Kernel` -> `Change kernel` -> `Python (mlcourse)`.
-
-
-Install using Azure Notebook
-
-Import this repo to you Azure Notebook account [![Azure Notebooks](https://notebooks.azure.com/launch.png)](https://notebooks.azure.com/import/gh/franperezlopez/mlcourse)
-
-Clone this project into your account 
+The previous script will create a new python environment for the course, with all packages needed to run the notebooks.
 
 
-Project Organization
---------------------
+
+### Install using Azure Notebook
+
+Visit the notebook [mlcourse](https://notebooks.azure.com/franperez/projects/mlcourse) in Azure Notebook, and click on the Clone icon to clone the project to your Azure Notebook workspace
+
+Alternatively, you can import this repo to you Azure Notebook account [![Azure Notebooks](https://notebooks.azure.com/launch.png)](https://notebooks.azure.com/import/gh/franperezlopez/mlcourse)
+
+Once the project is in your workspace, click on the Button `Run on Free Computer` to start the container; after the container is initializer, you will get the usual Jupyter Notebook screen page.
+
+### Execute the notebook
+
+After executing Jupyter server, you can check the notebook located in the folder named `notebooks`. After opening any notebook, check that the kernel you're using is the one named `Python (mlcourse)`, otherwise change it using the menu `Kernel` -> `Change kernel` -> `Python (mlcourse)`.
+
+Bear in mind, executing the Notebook using Azure Notebook is **slow** as this is a free service. You will get a better performance executing the notebook in your local machine, or executing the Azure Notebook in a server not from the free tier.
+
+
+
+### Project Organization
 
     ├── LICENSE
     ├── README.md          <- The top-level README for developers using this project.

@@ -151,11 +151,12 @@ def plot_learning_curve(m, X, y, plot_training = True, plot_validation= True, pl
         plot_validation {bool} -- plot validation curve (default: {True})
         plot_ci {bool} -- plot confidence interval (default: {True})
     """
+    scoring = 'r2'
     train_sizes, train_scores, test_scores = learning_curve(m,
                                                         X,
                                                         y,
                                                         cv=3, # Number of folds in cross-validation
-                                                        scoring='r2', # Evaluation metric
+                                                        scoring=scoring, # Evaluation metric
                                                         n_jobs=-1, # Use all computer cores
                                                         train_sizes=np.linspace(0.01, 1.0, 50) # 50 different sizes of the training set
                                                         #train_sizes=[0.01, 0.05]
@@ -187,7 +188,7 @@ def plot_learning_curve(m, X, y, plot_training = True, plot_validation= True, pl
 
     # Create plot
     plt.title("Learning Curve")
-    plt.xlabel("Training Set Size"), plt.ylabel("Accuracy Score"), plt.legend(loc="best")
+    plt.xlabel("Training Set Size"), plt.ylabel(f"Score ({scoring})"), plt.legend(loc="best")
     plt.tight_layout()
     plt.show()
 

@@ -7,7 +7,7 @@
 
 * Conda installation: [Install Anaconda](http://docs.anaconda.com/anaconda/install/) for your OS
 
-* After installing Conda, you need to execute following commands from the folder where the repository is located:
+* After installing Conda, you need to execute following commands from the folder where the repository is located, in order to create a new python environment with all packages needed to run the notebooks:
 ```sh
 conda update -n base -c defaults conda
 conda env create --name mlcourse -f environment.yml
@@ -15,8 +15,7 @@ conda activate mlcourse
 python -m ipykernel install --user --name mlcourse --display-name "Python (mlcourse)"
 jupyter notebook
 ```
-The previous script will create a new python environment for the course, with all packages needed to run the notebooks.
-
+* Access to the folder `data` / `raw`, and uncompress the zip file named `bluebook-for-bulldozers.zip`, which contains another file named `Train.zip` that needs to be unzipped to get the file `Train.csv`
 
 
 ### Install using Azure Notebook

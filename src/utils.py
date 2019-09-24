@@ -68,7 +68,7 @@ def add_datepart(df: pd.DataFrame, dateFieldName:str, dropDateField:bool=True, t
 
     if not np.issubdtype(fld_dtype, np.datetime64):
         df[dateFieldName] = fld = pd.to_datetime(fld, infer_datetime_format=True)
-    targ_pre = re.sub('[Dd]ate$', '', dateFieldName)
+    targ_pre = dateFieldName + "_"
     attr = ['Year', 'Month', 'Week', 'Day', 'Dayofweek', 'Dayofyear',
             'Is_month_end', 'Is_month_start', 'Is_quarter_end', 'Is_quarter_start', 'Is_year_end', 'Is_year_start']
     if time: attr = attr + ['Hour', 'Minute', 'Second']
